@@ -40,17 +40,19 @@ SPMCommand.set_mlab_paths(
     use_mcr=False
 )
 
-heuristic_path = '/media/maria/6CFC0A9C74ABFF45/scripts_generales/HEURISTIC.py'
+# Add Path to heudiconv heuristic file
+heuristic_path = ''
 
 # Base directories (change these as needed)
-MRS_DATA_DIR = Path('/media/maria/5016523d-1bee-4995-9853-7e1dcc60bd0f/home/piedra_filosofal_backup/TEST_RETEST')
+MRS_DATA_DIR = Path('')
 
 # Define the list of base VOIs; to add more VOIs, simply update this list.
 VOI_LIST = ['dmPF', 'mTL']
 
 # LCModel parameters (if needed by spectral fitting)
 LCMODEL_PARAMS = {
-    "FILBAS": "/home/maria/.lcmodel/basis-sets/3t/press_te30_3t_v3.basis",
+    # Add path to basis set
+    "FILBAS": "",
     "LCSV": True,
     "LTABLE": True
 }
