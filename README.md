@@ -4,7 +4,7 @@ This project provides a Python-based processing pipeline for single-voxel PRESS 
 
 SPM to calculate tissue fractions and water concentration for partial volume correction.
 LCModel for spectral fitting and metabolite quantification.
-This is a refactored version created with the help of ChatGPT, and I have not tested this refactored version yet.
+This is a refactored version created with the help of ChatGPT.
 
 🚀 Feedback is highly welcome! If you test it and find any issues or have suggestions for improvement, please let me know.
 
