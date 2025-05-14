@@ -641,15 +641,6 @@ def qc_processing(mrs_general: Path, wconc_db: pd.DataFrame, voi_list: list):
                                 study_date = line.split()[1].strip()
                                 formatted_date = datetime.strptime(study_date, '%Y%m%d').strftime('%d/%m/%Y')
                                 qc_output.at[subject_id, 'mrs_acquisition_date'] = formatted_date
-                            if line.startswith('PatientSex:'):
-                                qc_output.at[subject_id, 'sex'] = line.split()[1].strip()
-                            if line.startswith('PatientBirthDate:'):
-                                try:
-                                    birthdate = line.split()[1].strip()
-                                    formatted_bd = datetime.strptime(birthdate, '%Y%m%d').strftime('%d/%m/%Y')
-                                    qc_output.at[subject_id, 'birthdate'] = formatted_bd
-                                except Exception:
-                                    logging.warning(f"{subject_id} has anonymized birthdate")
             except Exception as e:
                 logging.warning(f"Error reading additional info for {subject_id}: {e}")
     
